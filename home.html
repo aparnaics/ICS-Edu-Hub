@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FRONT PAGE</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+     
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        color: black;
+        text-align: center;
+        margin-top: 100px;
+        font-size: 70px;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1f4f9c;
+        padding: 10px 20px;
+        border-radius: 0 0 20px 30px;
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+    }
+
+    .search {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        position: relative;
+       margin-left:450px;
+    }
+
+    .search input {
+        width: 30%; 
+        border-radius: 20px;
+        padding: 6px 30px 6px 10px;
+        border: none;
+    }
+
+    .search img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        right: 36%;
+    }
+
+    .loginbutton {
+        margin-left: auto;
+    }
+
+    .loginbutton button {
+        width: 90px;
+        height: 30px;
+        background-color: white;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-icon {
+        display: none;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .navbars ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 10px 0;
+        background-color: #f1f1f1;
+        flex-wrap: wrap;
+    }
+
+    .navbars li {
+        margin: 0 10px;
+        position: relative;
+    }
+
+    li a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        padding: 10px;
+        display: block;
+    }
+
+    .dropdown-content,
+    .sub-dropdown {
+        display: none;
+        position: absolute;
+        background-color: #d2d3d4;
+        min-width: 200px;
+        z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content .dropdown:hover .sub-dropdown {
+        display: block;
+        left: 100%;
+        top: 0;
+    }
+
+    .dropdown-content a,
+    .sub-dropdown a {
+        padding: 10px 15px;
+        display: block;
+        color: black;
+        text-decoration: none;
+    }
+
+    .dropdown-content a:hover,
+    .sub-dropdown a:hover {
+        background-color: #717171;
+        color: white;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    .slide-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        max-height: 600px;
+        object-fit: cover;
+    }
+
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from { opacity: .4; }
+        to { opacity: 1; }
+    }
+
+    .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #f1f1f1;
+        color: #333;
+    }
+
+    .footer p {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .footer a {
+        text-decoration: none;
+        color: #1f4f9c;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-links {
+        margin: 10px 0;
+    }
+
+    .footer-links a {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+
+    .footer-contact {
+        margin-top: 10px;
+    }
+
+    .footer-contact a {
+        color: #1f4f9c;
+    }
+
+    .footer-contact a:hover {
+        text-decoration: underline;
+    }
+
+   
+    @media screen and (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .search {
+            width: 100%;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .search input {
+            width: 50%; 
+        }
+
+        .search img {
+            right: 30%;
+        }
+
+        .loginbutton {
+            margin: 10px auto;
+            align-self: center;
+        }
+
+        .menu-icon {
+            display: block;
+        }
+
+        .navbars ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 0;
+        }
+
+        .navbars ul.show {
+            display: flex;
+        }
+
+        .navbars li {
+            width: 100%;
+            text-align: center;
+        }
+
+        li a {
+            font-size: 20px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            position: relative;
+        }
+
+        .dropdown-content .dropdown:hover .sub-dropdown {
+            position: relative;
+            left: 0;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        h1 {
+            font-size: 40px;
+        }
+
+        .loginbutton button {
+            width: 70px;
+        }
+
+        .footer p {
+            font-size: 12px;
+        }
+
+        .search input {
+            font-size: 14px;
+        }
+    }
+</style>
+</head>
+<body>
+
+
+<div class="navbar">
+    <div class="logo">
+        <img src="https://play-lh.googleusercontent.com/xxxWKnRnAKCO7-ktvnWI31gzolp7kYIuIVsZPtjltdwJNuB9UPHssC0BvebGBc2IQts" alt="Logo">
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Search.." name="search">
+        <img src="https://static-00.iconduck.com/assets.00/search-icon-2048x2048-cmujl7en.png" alt="Search">
+    </div>
+    <div class="loginbutton">
+        <a href="loginpage.html"><button>Login</button></a>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+</div>
+
+<div class="navbars">
+    <ul id="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="#">Courses</a>
+            <div class="dropdown-content">
+                <a href="financecard.html">Finance & Accounting</a>
+                <a href="graphicdes.html">Graphic Designing</a>
+                <a href="fashionde.html">Fashion Designing</a>
+                <div class="dropdown">
+                    <a href="webcard.html">Web Development</a>
+                    <div class="sub-dropdown">
+                        <a href="frontend.html">Frontend</a>
+                        <a href="backend.html">Backend</a>
+                    </div>
+                </div>
+                <a href="hardcard.html">Hardware & Networking</a>
+                <a href="CAD.html">CAD Training</a>
+                <a href="language.html">Language Training</a>
+                <a href="office.html">Office Administration</a>
+                <a href="Technical.html">Technical Training</a>
+                <a href="softskill.html">Softskill Training</a>
+            </div>
+        </li>
+        <li><a href="Placements.html">Placements</a></li>
+        <li><a href="Aboutus.html">About us</a></li>
+        <li><a href="courseenq.html">Course Enquiry</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+</div>
+
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="https://media.licdn.com/dms/image/v2/D4D12AQHYC_ZczxV2zw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1695524296879?e=2147483647&v=beta&t=rLMZ59ByIABpdPtfPZPZC65iXWG4zbht2eqKfWOdxRs" class="slide-image">
+    </div>
+    <div class="mySlides fade">
+        <img src="https://img.freepik.com/free-photo/data-information-report-statistics-strategy-concept_53876-120961.jpg" class="slide-image">
+    </div>
+    <div class="mySlides fade">
+        <img src="https://cdn.pixabay.com/photo/2017/10/31/11/30/binary-2904980_1280.jpg" class="slide-image">
+    </div>
+    <div class="mySlides fade">
+        <img src="https://englishcoachonline.com/wp-content/uploads/2021/08/pexels-pixabay-247819-1-1.jpg" class="slide-image">
+    </div>
+</div>
+
+
+<div class="footer">
+    <p>&copy; 2025 All rights reserved | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    <div class="footer-links">
+        <a href="https://www.facebook.com/icsindiaottapalam/" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/p/DBiAd4pPLQu/" target="_blank">Instagram</a>
+    </div>
+    <div class="footer-contact">
+        <p>Contact us: <a href="icsindia@gmail.com">icsindia@gmail.com</a></p>
+        <p>Phone: 9562044888, 9656033529</p>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
+
+    function toggleMenu() {
+        const navbarLinks = document.getElementById("navbar-links");
+        navbarLinks.classList.toggle("show");
+    }
+</script>
+
+</body>
+</html>

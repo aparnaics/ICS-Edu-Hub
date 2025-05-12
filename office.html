@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Office Administration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-image: url(office.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    .headdiv {
+      width: 100%;
+      height: 100px;
+      text-align: center;
+      color: whitesmoke;
+      border-radius: 0 0 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     
+    }
+
+    .logo {
+      position: absolute;
+      top: 30px;
+      left: 10px;
+    }
+
+    .logo img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 80%;
+      height: 300px;
+      perspective: 1000px;
+      margin-top: 90px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .flip-card-front {
+      background-color: white;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .flip-card-back {
+      background-color: #2980b9;
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    @media (max-width: 576px) {
+      h2 {
+        font-size: 25px;
+      }
+
+      .flip-card {
+        height: 320px;
+      }
+
+      .card-img-top {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <div class="headdiv">
+     <div class="logo">
+    <a href="index.html">
+      <img src="icsicon.png" alt="Logo">
+      </a>
+      
+  </div>
+     <h2 style="color:white;padding-top: 190px;">OFFICE ADMINISTRATIVE</h2>
+  </div>
+
+  <div class="container my-5">
+  <div class="row g-4 justify-content-center">
+ 
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="flip-card">
+  <div class="flip-card-inner">
+  <div class="flip-card-front">
+      <img class="card-img-top" src="MICROSOFT.webp" alt="MS Word">
+      <h3>MS WORD</h3>
+  </div>
+  <div class="flip-card-back">
+      <h2><a href="msword.html">View Details</a></h2>
+  </div>
+  </div>
+  </div>
+  </div>
+
+      
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="flip-card">
+  <div class="flip-card-inner">
+  <div class="flip-card-front">
+    <img class="card-img-top" src="IMG1.jpg" alt="MS Excel">
+    <h3>MS EXCEL</h3>
+  </div>
+  <div class="flip-card-back">
+    <h2><a href="msexcel.html">View Details</a></h2>
+  </div>
+  </div>
+  </div>
+  </div>
+
+     
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="flip-card">
+  <div class="flip-card-inner">
+  <div class="flip-card-front">
+      <img class="card-img-top" src="images.jpg" alt="MS PowerPoint">
+      <h3>MS POWERPOINT</h3>
+  </div>
+  <div class="flip-card-back">
+      <h2><a href="mspowerpoint.html">View Details</a></h2>
+  </div>
+  </div>
+  </div>
+  </div>
+
+      
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="flip-card">
+  <div class="flip-card-inner">
+  <div class="flip-card-front">
+        <img class="card-img-top" src="access.jpg" alt="MS Access">
+        <h3>MS ACCESS</h3>
+  </div>
+  <div class="flip-card-back">
+        <h2><a href="msaccess.html">View Details</a></h2>
+  </div>
+  </div>
+  </div>
+  </div>
+
+      
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="flip-card">
+  <div class="flip-card-inner">
+  <div class="flip-card-front">
+        <img class="card-img-top" src="IMG2.jpg" alt="MS Outlook">
+        <h3>MS OUTLOOK</h3>
+  </div>
+  <div class="flip-card-back">
+        <h2><a href="msoutlook.html">View Details</a></h2>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  </div>
+  </div>
+
+</body>
+</html>
