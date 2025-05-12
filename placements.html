@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Placements</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    
+      background-color: #f4f4f4;
+      background-image:url(place.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    
+
+    h1, p {
+      text-align: center;
+      color: black;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 1000px;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+
+    .logo img {
+      width: 60px;
+      height: 60px;
+      margin-top: 20px;
+      margin-left: 10px;
+      border-radius: 50px;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 50px 20px;
+    }
+
+    .card {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .card-details {
+      position: absolute;
+      bottom: -90px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 10px 5px;
+      text-align: center;
+      font-size: 14px;
+      border-radius: 0 0 50% 50%;
+    }
+
+    .card-details span {
+      display: block;
+      margin: 4px 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 200px;
+        height: 200px;
+      }
+
+      .card-details {
+        font-size: 13px;
+        bottom: -75px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+
+  <div class="logo">
+    <a href="index.html">
+      <img src="icsicon.png" alt="Logo">
+    </a>
+  </div>
+
+  <h1>Our Placements</h1>
+  <p>
+    ICS group of Institutions are committed to dispense placement assistance & strengthen our students' self-confidence to overcome the challenges in their professional lives. We provide authentic and specialized opportunities to each and every individual. We constantly endeavour to assist students in chasing their career intentions through efficient interplay with corporate professionals via Seminars and Workshops. Our Placement Department takes responsibility for framing students’ careers right from their induction, classroom training, internships, and final placements. We arrange platforms for students to explore their academic and technical skills across a comprehensive range of industries and companies. We also arrange On Campus and Off Campus recruitment drives to open up career opportunities.
+  </p>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="https://media.istockphoto.com/id/1449106027/photo/happy-smiling-female-college-student-looking-at-camera-holding-red-folder.jpg?s=612x612&w=0&k=20&c=7T9L6zx0BOTB-A2x366plM0PQWid1w9xKFlWDJlkCr8=" alt="Neha">
+      <div class="card-details">
+        <span><strong>Name:</strong> Neha</span>
+        <span><strong>Course:</strong> Graphic Designing</span>
+        <span><strong>Company:</strong> Featherneopvt.Ltd</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://thumbs.dreamstime.com/b/female-university-student-gorgeous-indian-portrait-41039145.jpg" alt="Jinisha">
+      <div class="card-details">
+        <span><strong>Name:</strong> Jinisha</span>
+        <span><strong>Course:</strong> ICSE Development</span>
+        <span><strong>Company:</strong> Phonenix Advertising</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://media.istockphoto.com/id/905637572/photo/confident-college-student-on-her-way-to-class.jpg?s=612x612&w=0&k=20&c=Sp5cITilP2yzNH_wse0DJjelCE_9Dy-fmd98jeclwC0=" alt="Alice">
+      <div class="card-details">
+        <span><strong>Name:</strong> Alice</span>
+        <span><strong>Course:</strong> MACT</span>
+        <span><strong>Company:</strong> Hypolux</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
